@@ -49,8 +49,8 @@ document.querySelector('#dateNext').addEventListener('click',()=>{
 
 document.querySelector('#restart').addEventListener('click',()=>location.reload());
 
-document.querySelector('#share').addEventListener('click',async()=>{
-  const text=`У нас свидание 💗\n${document.querySelector('#summaryPlan').textContent}\n${document.querySelector('#summaryDate').textContent} в ${document.querySelector('#summaryTime').textContent}`;
-  if(navigator.share){await navigator.share({title:'Наше свидание 💌',text,url:location.href});}
-  else{await navigator.clipboard.writeText(location.href);alert('Ссылка скопирована 💗');}
+document.querySelector('#share').addEventListener('click',()=>{
+  const text = 'Приглашение на свидание 💗 ' + document.querySelector('#summaryPlan').textContent + ' ' + document.querySelector('#summaryDate').textContent + ' в ' + document.querySelector('#summaryTime').textContent;
+  const telegramUrl = 'https://t.me/share/url?url=' + encodeURIComponent(location.href) + '&text=' + encodeURIComponent(text);
+  window.open(telegramUrl, '_blank', 'noopener,noreferrer');
 });
