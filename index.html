@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ff6f91">
+  <title>Маленькое приглашение 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient"></div>
+  <main class="phone">
+    <div class="progress"><span></span></div>
+
+    <section class="screen active" data-screen="0">
+      <div class="art cat">🐻‍❄️<span>💗</span></div>
+      <p class="eyebrow">маленький сюрприз</p>
+      <h1>У меня к тебе<br><em>один вопрос…</em> 🥺</h1>
+      <p class="sub">Можно я украду у тебя немного времени?</p>
+      <button class="primary next">Конечно 💗</button>
+      <button class="ghost next">Ладно… 😌</button>
+    </section>
+
+    <section class="screen" data-screen="1">
+      <div class="art couple">🐰<span>🧸</span></div>
+      <p class="eyebrow">вопрос №1</p>
+      <h2>Пойдём куда-нибудь<br>вместе? 😍</h2>
+      <p class="sub">Обещаю, будет вкусно, уютно и без скуки.</p>
+      <div class="choice-grid">
+        <button class="choice" data-value="Да! 💕">Да! 💕</button>
+        <button class="choice" data-value="Очень хочу 🥹">Очень хочу 🥹</button>
+      </div>
+    </section>
+
+    <section class="screen" data-screen="2">
+      <div class="art food">🍕<span>✨</span></div>
+      <p class="eyebrow">выбираем план</p>
+      <h2>Чем займёмся?</h2>
+      <p class="sub">Выбери то, что тебе сейчас больше хочется.</p>
+      <div class="choice-grid three">
+        <button class="choice plan" data-value="🍕 Пицца">🍕<b>Пицца</b><small>и много разговоров</small></button>
+        <button class="choice plan" data-value="🎬 Кино">🎬<b>Кино</b><small>и уютный вечер</small></button>
+        <button class="choice plan" data-value="☕ Кофе">☕<b>Кофе</b><small>и прогулка</small></button>
+      </div>
+      <button class="primary next" id="planNext" disabled>Дальше →</button>
+    </section>
+
+    <section class="screen" data-screen="3">
+      <div class="art calendar">📅<span>💌</span></div>
+      <p class="eyebrow">осталась одна деталь</p>
+      <h2>Когда тебя украсть?</h2>
+      <p class="sub">Выбери удобную дату и время.</p>
+      <div class="inputs">
+        <label>Дата<input id="date" type="date"></label>
+        <label>Время<input id="time" type="time" value="19:00"></label>
+      </div>
+      <button class="primary" id="dateNext">Продолжить →</button>
+    </section>
+
+    <section class="screen" data-screen="4">
+      <div class="art final">💌<span>💗</span></div>
+      <p class="eyebrow">всё готово</p>
+      <h2>Тогда договорились! 🥰</h2>
+      <p class="sub" id="summary">Наш маленький план уже ждёт нас.</p>
+      <div class="ticket">
+        <div><span>План</span><b id="summaryPlan">—</b></div>
+        <div><span>Дата</span><b id="summaryDate">—</b></div>
+        <div><span>Время</span><b id="summaryTime">—</b></div>
+      </div>
+      <button class="primary" id="share">Отправить 💌</button>
+      <button class="ghost" id="restart">Начать сначала</button>
+    </section>
+  </main>
+  <div class="hearts" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
